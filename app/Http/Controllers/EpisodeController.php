@@ -38,7 +38,7 @@ class EpisodeController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'episodenumber' => $request->episodenumber,
-            'createddate' => $request->createddate,
+
         ]);
 
         return new EpisodeResource($episode);
@@ -69,7 +69,7 @@ class EpisodeController extends Controller
             return response()->json(['error' => 'You can only edit your own episodes.'], 403);
         }
 
-        $episode->update($request->only(['title', 'description']));
+        $episode->update($request->only(['title', 'description', 'episodenumber']));
 
         return new EpisodeResource($episode);
     }
