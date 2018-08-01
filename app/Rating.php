@@ -11,7 +11,7 @@ class Rating extends Model
      *
      * @var array
      */
-    protected $fillable = ['id', 'user_id', 'rating'];
+    protected $fillable = ['episode_id', 'user_id', 'rating'];
 
     /**
      * A rating belongs to a episode
