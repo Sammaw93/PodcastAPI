@@ -21,7 +21,7 @@ class RatingController extends Controller
         $rating = Rating::firstOrCreate(
             [
                 'user_id' => auth()->user()->id,
-                'id' => $episode->id,
+                'episode_id' => $episode->id,
             ],
             ['rating' => $request->rating]
         );
