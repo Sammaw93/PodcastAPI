@@ -26,6 +26,9 @@ class RatingController extends Controller
             ['rating' => $request->rating]
         );
 
+        $path =Storage::disk('do-spaces')->putFileAs('ratings',
+        $request->file('uploaded_file'), time().'.'.$extension);
+
         return new RatingResource($rating);
     }
 }

@@ -12,8 +12,5 @@
 */
 
 Route::get('/', function () {
-    return view('upload');
+    return view('welcome');
 });
-
-Route::post('/upload', 'EpisodeController@store')->name('upload');
-Route::get('/download', 'EpisodeController@show')->name('download');

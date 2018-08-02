@@ -39,6 +39,9 @@ class EpisodeController extends Controller
             'description' => $request->description,
             'episodenumber' => $request->episodenumber,
 
+          $path =Storage::disk('do-spaces')->putFileAs('episodes',
+          $request->file('uploaded_file'), time().'.'.$extension);
+
         ]);
 
         return new EpisodeResource($episode);
