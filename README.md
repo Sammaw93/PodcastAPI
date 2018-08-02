@@ -1,4 +1,6 @@
-Attempted the API test,
+Attempted the API test, I apologise if its not exactly what you was looking for
+im still currently learning how to understand/build API's from self
+study but i did my best to complete the task.
 
 Created an API in MVC format.
 
